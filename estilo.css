@@ -1,0 +1,57 @@
+* {
+    padding: 0;
+    margin: 0;
+    outline: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 350;
+    font-size: 20px;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    background: black;
+}
+input {
+    margin: 2px;
+    border-radius: 3px;
+}
+input[type=text] {
+    width: calc(100% - 4px);
+    height: 40px;
+}
+input[type=button] {
+    width: 70px;
+    height: 30px;
+    transition: ease 0.2s;   /* Tempo da animação do css */
+    cursor: pointer; /* Tipo de cursor */
+}
+div#calculadora {
+    box-shadow: 0 0 20px black;
+}
+div#calculadora div {
+    display: flex;
+}
+div#calculadora div input:nth-child(4) {
+    background: red;
+}
+div#quarta input:nth-child(1) {
+    background: blue;
+}
+div#quarta input:nth-child(1), div#calculadora {
+    border-bottom-left-radius: 25px;
+}
+div#quarta input:nth-child(3) {
+    background: green;
+}
+div#quarta input:nth-child(4), div#calculadora {
+    border-bottom-right-radius: 25px;
+}
+
+input[type=button]:active {
+    transform: scale(0.9);
+}
+/* PS: NTH-child serve para espeficiar o filho da tag, exemplo, se tenho varias tags P, utilizo esse comando para especificar exatamente qual eu irei querer mudar. Utilizando numeros como se fossem posições de vetores, assim posso mudar eles de forma individual.
+Site de auxilio: https://www.w3schools.com/cssref/sel_nth-child.asp
+*/
